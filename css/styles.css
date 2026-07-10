@@ -122,6 +122,8 @@ textarea:focus-visible, select:focus-visible, [tabindex]:focus-visible {
 }
 .brand:hover { text-decoration: none; color: var(--text); }
 .brand .mark { color: var(--red); }
+.logo-img { height: 34px; width: auto; display: block; }
+.footer-grid .logo-img { height: 28px; margin-bottom: 10px; }
 
 .nav-links {
   display: flex;
