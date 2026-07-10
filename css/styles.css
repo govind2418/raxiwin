@@ -226,7 +226,7 @@ section.tight { padding: 32px 0; }
 .card h3 { color: var(--text); }
 .card .tag {
   display: inline-block;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -329,7 +329,7 @@ input::placeholder, textarea::placeholder { color: var(--text-mute); }
 }
 
 /* Badges */
-.badge { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; }
+.badge { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; }
 .badge-free { background: rgba(46, 204, 113, 0.15); color: #4ee08a; }
 .badge-new { background: rgba(255,176,32,0.15); color: var(--gold); }
 
