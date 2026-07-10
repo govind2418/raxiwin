@@ -2,7 +2,7 @@
   "name": "Raxi Game",
   "short_name": "Raxi Game",
   "description": "Free browser games — Snake, 2048, Memory Match, Tic-Tac-Toe, Whack-a-Mole and Reaction Test. No downloads, no real-money wagering.",
-  "start_url": "/index.html",
+  "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#0a0908",

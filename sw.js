@@ -1,6 +1,6 @@
-const CACHE = 'raxi-game-v1';
+const CACHE = 'raxi-game-v2';
 const ASSETS = [
-  '/index.html',
+  '/',
   '/games.html',
   '/css/styles.css',
   '/js/main.js',
