@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "static-server",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["/Users/lumosysweb/Desktop/rexigame.com/.claude/server.js"],
+      "port": 8080
+    }
+  ]
+}

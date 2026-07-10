@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raxi Login — Sign In to Save Your Scores</title>
+<meta name="description" content="Raxi Login lets you set up a free local profile so your Raxi Game scores are labeled and easy to track. No password, no personal data required.">
+<link rel="canonical" href="https://rexigame.com/raxi-login.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/icons/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.json">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Raxi Login — Sign In to Save Your Scores">
+<meta property="og:description" content="Set up a free local Raxi Game profile in seconds — no password, no email required.">
+<meta property="og:url" content="https://rexigame.com/raxi-login.html">
+<meta property="og:site_name" content="Raxi Game">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="/css/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rexigame.com/index.html"},
+    {"@type": "ListItem", "position": 2, "name": "Raxi Login", "item": "https://rexigame.com/raxi-login.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="/index.html"><span class="mark">&#9670;</span> Raxi Game</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="navLinks">&#9776; Menu</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/games.html">Games</a></li>
+      <li><a href="/raxi-win.html">Raxi Win</a></li>
+      <li><a href="/how-to-play.html">How to Play</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/faq.html">FAQ</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a class="nav-cta" href="/raxi-login.html" aria-current="page">Login</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="tight">
+    <div class="container">
+      <p class="breadcrumb"><a href="/index.html">Home</a> / Raxi Login</p>
+      <span class="eyebrow">Raxi Login</span>
+      <h1>Raxi Login — a lightweight profile, not a password vault</h1>
+      <p class="lead">Raxi Game doesn't need your email or a password to personalize your experience. Pick a display name below and it's saved on this device, so your scores on <a href="/raxi-win.html">Raxi Win</a> are labeled as yours.</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="container" style="max-width:480px;">
+      <div class="card">
+        <p id="login-current" role="status" hidden></p>
+        <form id="login-form" novalidate>
+          <label for="login-name">Display name</label>
+          <input type="text" id="login-name" name="name" maxlength="24" autocomplete="nickname" placeholder="e.g. RaxiRider">
+          <p class="field-error" id="login-name-error" role="alert"></p>
+          <button class="btn btn-primary btn-block" type="submit">Save &amp; Log In</button>
+        </form>
+        <button class="btn btn-outline btn-block" id="login-logout" hidden style="margin-top:12px;">Log Out</button>
+        <p class="form-status" role="status" id="login-status"></p>
+      </div>
+      <p class="form-note">Your display name is stored only in this browser (localStorage). Nothing is sent to a server, and no personal information is collected. See our <a href="/legal.html">Privacy Policy</a> for details.</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="container">
+      <h2>Why Raxi Login works this way</h2>
+      <p>Most games ask for an email and password before you've even decided if you like them. Raxi Game flips that: play first from the <a href="/games.html">Games hub</a>, and only set up a profile if you want your best scores clearly labeled. It's login without the friction — and without collecting data we don't need.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="/index.html"><span class="mark">&#9670;</span> Raxi Game</a>
+        <p>Free browser games with a dark, competitive edge. No downloads, no real-money wagering — just fast, skill-based play.</p>
+      </div>
+      <div><h4>Play</h4><ul><li><a href="/games.html">All Games</a></li><li><a href="/raxi-win.html">Raxi Win</a></li><li><a href="/how-to-play.html">How to Play</a></li></ul></div>
+      <div><h4>Account</h4><ul><li><a href="/raxi-login.html">Raxi Login</a></li><li><a href="/raxi-app.html">Raxi App</a></li><li><a href="/faq.html">FAQ</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="/about.html">About</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/legal.html">Privacy &amp; Terms</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Raxi Game. All rights reserved.</span>
+      <span><a href="/legal.html">Privacy Policy</a> &middot; <a href="/legal.html#terms">Terms of Use</a></span>
+    </div>
+  </div>
+</footer>
+<script src="/js/main.js"></script>
+<script src="/js/auth.js"></script>
+</body>
+</html>

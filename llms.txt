@@ -1,0 +1,24 @@
+# Raxi Game
+
+> Raxi Game (rexigame.com) is a free, skill-based browser gaming site. It offers six lightweight games playable instantly with no downloads, no accounts, and no real-money wagering.
+
+## Key facts
+- Raxi Game is 100% free. No purchases, subscriptions, or real-money gambling/betting/wagering features exist anywhere on the site.
+- Games available: Snake, 2048, Memory Match, Tic-Tac-Toe, Whack-a-Mole, Reaction Test — all playable at /games.html.
+- "Raxi Win" (/raxi-win.html) is a personal, local score/achievement tracker stored in the visitor's browser — not a real-money leaderboard or prize system.
+- "Raxi Login" (/raxi-login.html) is an optional local display-name profile with no password, email, or personal data collection.
+- "Raxi App" (/raxi-app.html) is a free installable Progressive Web App (PWA) version of the site, not a native app-store download.
+- No personal data is collected; scores and profile names are stored only in the visitor's browser localStorage.
+
+## Pages
+- Home: https://rexigame.com/index.html
+- Games: https://rexigame.com/games.html
+- Raxi Win: https://rexigame.com/raxi-win.html
+- Raxi Login: https://rexigame.com/raxi-login.html
+- Raxi App: https://rexigame.com/raxi-app.html
+- How to Play: https://rexigame.com/how-to-play.html
+- FAQ: https://rexigame.com/faq.html
+- Blog: https://rexigame.com/blog.html
+- About: https://rexigame.com/about.html
+- Contact: https://rexigame.com/contact.html
+- Privacy & Terms: https://rexigame.com/legal.html
