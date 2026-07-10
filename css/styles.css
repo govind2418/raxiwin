@@ -207,6 +207,14 @@ textarea:focus-visible, select:focus-visible, [tabindex]:focus-visible {
   margin: 0 auto 1.75em;
   font-size: 1.1rem;
 }
+.hero-art {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin: 44px auto 0;
+  border-radius: var(--radius);
+}
 .hero-actions {
   display: flex;
   gap: 14px;

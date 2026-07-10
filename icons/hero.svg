@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">Raxi Game</title>
+  <desc id="heroDesc">Dark-red arena artwork for Raxi Game featuring Snake, 2048, Memory Match, Tic-Tac-Toe, Whack-a-Mole and Reaction Test</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#141013"/>
+      <stop offset="1" stop-color="#0a0908"/>
+    </linearGradient>
+    <radialGradient id="glowGrad" cx="0.18" cy="0.15" r="0.75">
+      <stop offset="0" stop-color="#ff3049" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ff3049" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="textGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb020"/>
+      <stop offset="0.45" stop-color="#ff3049"/>
+      <stop offset="1" stop-color="#cf1130"/>
+    </linearGradient>
+    <linearGradient id="chipGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#241f22"/>
+      <stop offset="1" stop-color="#1b1719"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="1198" height="558" rx="24" fill="url(#bgGrad)" stroke="#34292c"/>
+  <rect x="1" y="1" width="1198" height="558" rx="24" fill="url(#glowGrad)"/>
+
+  <!-- Brand mark -->
+  <g transform="translate(64,72)">
+    <path d="M28 0 L54 14 V38 C54 47 42 54 28 56 C14 54 2 47 2 38 V14 Z" fill="url(#textGrad)"/>
+    <text x="28" y="37" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="900" fill="#0a0908" text-anchor="middle">R</text>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="60" y="230" font-family="Arial, Helvetica, sans-serif" font-size="118" font-weight="900" fill="url(#textGrad)" letter-spacing="-2">RAXI</text>
+  <text x="60" y="300" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="800" fill="#f4eef0" letter-spacing="6">GAME</text>
+  <text x="62" y="336" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#ffb020" letter-spacing="3">FREE ONLINE GAMES ARENA</text>
+
+  <!-- tags -->
+  <g font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#cbc2c5">
+    <circle cx="66" cy="392" r="3" fill="#4ee08a"/>
+    <text x="78" y="397">No downloads</text>
+    <circle cx="226" cy="392" r="3" fill="#4ee08a"/>
+    <text x="238" y="397">No sign-up required</text>
+    <circle cx="426" cy="392" r="3" fill="#4ee08a"/>
+    <text x="438" y="397">No real-money wagering</text>
+  </g>
+
+  <!-- Game badge chips -->
+  <g font-family="Arial, Helvetica, sans-serif">
+    <!-- Snake -->
+    <g transform="translate(660,60)">
+      <rect width="230" height="92" rx="16" fill="url(#chipGrad)" stroke="#34292c"/>
+      <g transform="translate(18,20)" stroke="#ff3049" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 40 H16 V20 H32 V40 H48"/>
+        <circle cx="48" cy="14" r="5" fill="#ffb020" stroke="none"/>
+      </g>
+      <text x="90" y="42" font-size="20" font-weight="800" fill="#f4eef0">Snake</text>
+      <text x="90" y="64" font-size="13" fill="#9a9095">Arcade</text>
+    </g>
+
+    <!-- 2048 -->
+    <g transform="translate(910,60)">
+      <rect width="230" height="92" rx="16" fill="url(#chipGrad)" stroke="#34292c"/>
+      <g transform="translate(18,16)">
+        <rect width="26" height="26" rx="4" fill="#7a0a1c"/>
+        <rect x="32" width="26" height="26" rx="4" fill="#cf1130"/>
+        <rect y="32" width="26" height="26" rx="4" fill="#ff3049"/>
+        <rect x="32" y="32" width="26" height="26" rx="4" fill="#ffb020"/>
+      </g>
+      <text x="90" y="42" font-size="20" font-weight="800" fill="#f4eef0">2048</text>
+      <text x="90" y="64" font-size="13" fill="#9a9095">Puzzle</text>
+    </g>
+
+    <!-- Memory -->
+    <g transform="translate(660,168)">
+      <rect width="230" height="92" rx="16" fill="url(#chipGrad)" stroke="#34292c"/>
+      <g transform="translate(18,18)">
+        <rect width="26" height="34" rx="4" fill="#241f22" stroke="#ff3049" stroke-width="2"/>
+        <rect x="32" width="26" height="34" rx="4" fill="#241f22" stroke="#ffb020" stroke-width="2"/>
+        <text x="13" y="23" font-size="14" font-weight="800" fill="#ff3049" text-anchor="middle">?</text>
+        <text x="45" y="23" font-size="14" font-weight="800" fill="#ffb020" text-anchor="middle">?</text>
+      </g>
+      <text x="90" y="42" font-size="20" font-weight="800" fill="#f4eef0">Memory Match</text>
+      <text x="90" y="64" font-size="13" fill="#9a9095">Puzzle</text>
+    </g>
+
+    <!-- Tic Tac Toe -->
+    <g transform="translate(910,168)">
+      <rect width="230" height="92" rx="16" fill="url(#chipGrad)" stroke="#34292c"/>
+      <g transform="translate(18,16)" stroke="#9a9095" stroke-width="2">
+        <line x1="20" y1="0" x2="20" y2="60"/>
+        <line x1="40" y1="0" x2="40" y2="60"/>
+        <line x1="0" y1="20" x2="60" y2="20"/>
+        <line x1="0" y1="40" x2="60" y2="40"/>
+        <g stroke="#ff3049" stroke-width="4" stroke-linecap="round">
+          <line x1="6" y1="6" x2="14" y2="14"/>
+          <line x1="14" y1="6" x2="6" y2="14"/>
+        </g>
+        <circle cx="30" cy="30" r="7" fill="none" stroke="#ffb020" stroke-width="4"/>
+      </g>
+      <text x="90" y="42" font-size="20" font-weight="800" fill="#f4eef0">Tic-Tac-Toe</text>
+      <text x="90" y="64" font-size="13" fill="#9a9095">Strategy</text>
+    </g>
+
+    <!-- Whack-a-mole -->
+    <g transform="translate(660,276)">
+      <rect width="230" height="92" rx="16" fill="url(#chipGrad)" stroke="#34292c"/>
+      <g transform="translate(18,16)">
+        <ellipse cx="30" cy="52" rx="28" ry="8" fill="#0a0908"/>
+        <circle cx="30" cy="34" r="18" fill="#ff3049"/>
+        <circle cx="23" cy="30" r="3" fill="#0a0908"/>
+        <circle cx="37" cy="30" r="3" fill="#0a0908"/>
+      </g>
+      <text x="90" y="42" font-size="20" font-weight="800" fill="#f4eef0">Whack-a-Mole</text>
+      <text x="90" y="64" font-size="13" fill="#9a9095">Reflex</text>
+    </g>
+
+    <!-- Reaction -->
+    <g transform="translate(910,276)">
+      <rect width="230" height="92" rx="16" fill="url(#chipGrad)" stroke="#34292c"/>
+      <g transform="translate(18,16)">
+        <circle cx="30" cy="30" r="26" fill="none" stroke="#4ee08a" stroke-width="4"/>
+        <circle cx="30" cy="30" r="14" fill="none" stroke="#4ee08a" stroke-width="4"/>
+        <circle cx="30" cy="30" r="4" fill="#4ee08a"/>
+      </g>
+      <text x="90" y="42" font-size="20" font-weight="800" fill="#f4eef0">Reaction Test</text>
+      <text x="90" y="64" font-size="13" fill="#9a9095">Skill</text>
+    </g>
+  </g>
+</svg>
