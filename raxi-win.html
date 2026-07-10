@@ -64,13 +64,20 @@
   <section class="tight">
     <div class="container">
       <p id="wins-empty" class="form-note">You haven't set any scores yet — <a href="/games.html">play a game</a> to start filling this in.</p>
-      <p id="wins-badges" style="font-weight:700; color:var(--gold);"></p>
+      <p id="wins-badges" style="font-weight:700; color:var(--gold);">0 of 6 achievements unlocked</p>
       <div class="card" style="overflow-x:auto;">
         <table>
           <thead>
             <tr><th scope="col">Game</th><th scope="col">Your best</th><th scope="col">Achievement</th></tr>
           </thead>
-          <tbody id="wins-body"></tbody>
+          <tbody id="wins-body">
+            <tr data-key="snake"><td>Raxi Snake</td><td>&mdash;</td><td><span style="color:var(--text-mute)">Locked</span></td></tr>
+            <tr data-key="2048"><td>Raxi 2048</td><td>&mdash;</td><td><span style="color:var(--text-mute)">Locked</span></td></tr>
+            <tr data-key="memory_moves"><td>Memory Match</td><td>&mdash;</td><td><span style="color:var(--text-mute)">Locked</span></td></tr>
+            <tr data-key="ttt_wins"><td>Tic-Tac-Toe</td><td>&mdash;</td><td><span style="color:var(--text-mute)">Locked</span></td></tr>
+            <tr data-key="whack"><td>Whack-a-Mole</td><td>&mdash;</td><td><span style="color:var(--text-mute)">Locked</span></td></tr>
+            <tr data-key="reaction"><td>Reaction Test</td><td>&mdash;</td><td><span style="color:var(--text-mute)">Locked</span></td></tr>
+          </tbody>
         </table>
       </div>
     </div>
@@ -122,9 +129,9 @@
         <a class="brand" href="/"><img src="/icons/logo.png" width="320" height="120" alt="Raxi Game" class="logo-img"></a>
         <p>Free browser games with a dark, competitive edge. No downloads, no real-money wagering — just fast, skill-based play.</p>
       </div>
-      <div><h4>Play</h4><ul><li><a href="/games.html">All Games</a></li><li><a href="/raxi-win.html">Raxi Win</a></li><li><a href="/how-to-play.html">How to Play</a></li></ul></div>
-      <div><h4>Account</h4><ul><li><a href="/raxi-login.html">Raxi Login</a></li><li><a href="/raxi-app.html">Raxi App</a></li><li><a href="/faq.html">FAQ</a></li></ul></div>
-      <div><h4>Company</h4><ul><li><a href="/about.html">About</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/legal.html">Privacy &amp; Terms</a></li></ul></div>
+      <div><h2>Play</h2><ul><li><a href="/games.html">All Games</a></li><li><a href="/raxi-win.html">Raxi Win</a></li><li><a href="/how-to-play.html">How to Play</a></li></ul></div>
+      <div><h2>Account</h2><ul><li><a href="/raxi-login.html">Raxi Login</a></li><li><a href="/raxi-app.html">Raxi App</a></li><li><a href="/faq.html">FAQ</a></li></ul></div>
+      <div><h2>Company</h2><ul><li><a href="/about.html">About</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/legal.html">Privacy &amp; Terms</a></li></ul></div>
     </div>
     <div class="footer-bottom">
       <span>&copy; <span id="year"></span> Raxi Game. All rights reserved.</span>

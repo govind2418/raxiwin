@@ -5,12 +5,12 @@
   }
 
   var rows = [
-    { key: 'snake', label: 'Raxi Snake', unit: 'pts', badge: 12 },
-    { key: '2048', label: 'Raxi 2048', unit: 'pts', badge: 512 },
-    { key: 'memory_moves', label: 'Memory Match', unit: 'moves', badge: 10, lowerIsBetter: true },
-    { key: 'ttt_wins', label: 'Tic-Tac-Toe', unit: 'wins', badge: 3 },
-    { key: 'whack', label: 'Whack-a-Mole', unit: 'pts', badge: 15 },
-    { key: 'reaction', label: 'Reaction Test', unit: 'ms', badge: 300, lowerIsBetter: true }
+    { key: 'snake', unit: 'pts', badge: 12 },
+    { key: '2048', unit: 'pts', badge: 512 },
+    { key: 'memory_moves', unit: 'moves', badge: 10, lowerIsBetter: true },
+    { key: 'ttt_wins', unit: 'wins', badge: 3 },
+    { key: 'whack', unit: 'pts', badge: 15 },
+    { key: 'reaction', unit: 'ms', badge: 300, lowerIsBetter: true }
   ];
 
   var tbody = document.getElementById('wins-body');
@@ -22,17 +22,18 @@
   var badgeCount = 0;
 
   rows.forEach(function (r) {
+    var tr = tbody.querySelector('tr[data-key="' + r.key + '"]');
+    if (!tr) return;
+    var cells = tr.querySelectorAll('td');
     var raw = get(r.key, null);
-    var tr = document.createElement('tr');
     var have = raw !== null;
     if (have) anyScore = true;
     var earned = have && (r.lowerIsBetter ? Number(raw) <= r.badge : Number(raw) >= r.badge);
     if (earned) badgeCount++;
-    tr.innerHTML =
-      '<td>' + r.label + '</td>' +
-      '<td>' + (have ? raw + ' ' + r.unit : '—') + '</td>' +
-      '<td>' + (earned ? '<span class="badge badge-new">Unlocked</span>' : '<span style="color:var(--text-mute)">Locked</span>') + '</td>';
-    tbody.appendChild(tr);
+    cells[1].textContent = have ? raw + ' ' + r.unit : '—';
+    cells[2].innerHTML = earned
+      ? '<span class="badge badge-new">Unlocked</span>'
+      : '<span style="color:var(--text-mute)">Locked</span>';
   });
 
   if (badgeWrap) badgeWrap.textContent = badgeCount + ' of ' + rows.length + ' achievements unlocked';

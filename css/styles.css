@@ -38,6 +38,11 @@ body {
 img, svg { max-width: 100%; display: block; }
 a { color: var(--red); text-decoration: none; }
 a:hover { color: #ff6478; text-decoration: underline; }
+p a, .disclosure a, .form-note a, .faq-answer a, .lead a {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 2px;
+}
 
 h1, h2, h3, h4 {
   font-family: var(--font);
@@ -223,7 +228,7 @@ section.tight { padding: 32px 0; }
   border-radius: var(--radius);
   padding: 22px;
 }
-.card h3 { color: var(--text); }
+.card h3, .card h2 { color: var(--text); font-size: clamp(1.15rem, 2.2vw, 1.5rem); }
 .card .tag {
   display: inline-block;
   font-size: 0.75rem;
@@ -305,7 +310,7 @@ input::placeholder, textarea::placeholder { color: var(--text-mute); }
   gap: 28px;
   margin-bottom: 28px;
 }
-.footer-grid h4 { color: var(--text); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.footer-grid h2 { color: var(--text); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 0.5em; }
 .footer-grid ul { list-style: none; padding: 0; margin: 0; }
 .footer-grid li { margin-bottom: 8px; }
 .footer-grid a { color: var(--text-mute); }
