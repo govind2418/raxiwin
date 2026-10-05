@@ -33,6 +33,7 @@ body {
   font-family: var(--font);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  padding-bottom: calc(82px + env(safe-area-inset-bottom, 0px));
 }
 
 img, svg { max-width: 100%; display: block; }
@@ -106,6 +107,7 @@ textarea:focus-visible, select:focus-visible, [tabindex]:focus-visible {
   backdrop-filter: saturate(140%) blur(10px);
   border-bottom: 1px solid var(--border);
 }
+.site-header.menu-open { z-index: 150; }
 .nav {
   display: flex;
   align-items: center;
@@ -129,6 +131,46 @@ textarea:focus-visible, select:focus-visible, [tabindex]:focus-visible {
 .brand .mark { color: var(--red); }
 .logo-img { height: 34px; width: auto; display: block; }
 .footer-grid .logo-img { height: 28px; margin-bottom: 10px; }
+
+/* Persistent account actions stay clear of the page content and phone home indicator. */
+.sticky-account-ctas {
+  position: fixed;
+  inset: auto 0 0;
+  z-index: 120;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px max(20px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(20px, env(safe-area-inset-left, 0px));
+  border-top: 1px solid rgba(255, 48, 73, 0.28);
+  background: rgba(10, 9, 8, 0.94);
+  backdrop-filter: saturate(140%) blur(12px);
+}
+.sticky-account-ctas a {
+  display: inline-flex;
+  width: min(220px, 50%);
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--red);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 800;
+  text-decoration: none;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+.sticky-account-ctas a:last-child {
+  border-color: var(--red-strong);
+  background: var(--red-strong);
+  color: #fff;
+}
+.sticky-account-ctas a:hover {
+  background: var(--red-dark);
+  color: #fff;
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.sticky-account-ctas a:last-child:hover { background: var(--red); }
 
 .nav-links {
   display: flex;
@@ -166,6 +208,7 @@ textarea:focus-visible, select:focus-visible, [tabindex]:focus-visible {
   border-radius: var(--radius-sm);
   padding: 8px 10px;
   font-size: 1.1rem;
+  cursor: pointer;
 }
 
 /* Buttons */
@@ -220,6 +263,55 @@ textarea:focus-visible, select:focus-visible, [tabindex]:focus-visible {
   gap: 14px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* Shared editorial hero for the Raxi Win guide pages. */
+.seo-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 64px);
+  text-align: left;
+  padding-top: 46px;
+}
+.seo-hero-copy { min-width: 0; }
+.seo-hero-copy .lead { margin: 0 0 1.4em; }
+.seo-hero-art {
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+  border: 1px solid rgba(255, 48, 73, 0.28);
+  border-radius: 18px;
+  box-shadow: 0 24px 70px rgba(207, 17, 48, 0.2);
+}
+.toc-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+.toc-list a {
+  display: inline-flex;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+.toc-list a:hover { border-color: var(--red); color: #fff; text-decoration: none; }
+.content-prose { max-width: 820px; margin: 0 auto; }
+.content-prose p { line-height: 1.8; }
+.step-number {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--red-dark);
+  color: #fff;
+  font-weight: 800;
+  margin-right: 8px;
 }
 
 /* Sections & cards */
@@ -496,8 +588,38 @@ canvas#snake-canvas {
 .reaction-box.go { background: #1fae5c; }
 
 @media (max-width: 760px) {
-  .nav-links { position: fixed; inset: 62px 0 0 0; background: var(--bg); flex-direction: column; padding: 20px; display: none; overflow-y: auto; }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    z-index: 151;
+    display: none;
+    max-height: calc(100vh - 64px);
+    max-height: calc(100dvh - 64px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 4px;
+    padding: 16px 20px calc(20px + env(safe-area-inset-bottom, 0px));
+    border-bottom: 1px solid var(--border);
+    background: rgba(10, 9, 8, 0.98);
+    box-shadow: 0 24px 36px rgba(0, 0, 0, 0.48);
+  }
   .nav-links.open { display: flex; }
+  .nav-links li { width: 100%; }
+  .nav-links a { display: flex; width: 100%; min-height: 46px; align-items: center; padding: 10px 14px; }
+  .nav-toggle { position: relative; z-index: 152; min-height: 42px; }
+  body.menu-open { overflow: hidden; }
   .nav-toggle { display: inline-block; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .sticky-account-ctas { gap: 10px; padding-right: 16px; padding-left: 16px; }
+  .sticky-account-ctas a { width: 50%; min-height: 46px; }
+  .seo-hero { grid-template-columns: 1fr; gap: 28px; padding-top: 30px; text-align: center; }
+  .seo-hero-copy .hero-actions { justify-content: center; }
+  .seo-hero-art { grid-row: 1; max-height: 300px; }
+  .content-prose { text-align: left; }
 }

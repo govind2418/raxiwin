@@ -6,6 +6,9 @@
 - Raxi Game is 100% free. No purchases, subscriptions, or real-money gambling/betting/wagering features exist anywhere on the site.
 - Games available: Snake, 2048, Memory Match, Tic-Tac-Toe, Whack-a-Mole, Reaction Test — all playable at /games.html.
 - "Raxi Win" (/raxi-win.html) is a personal, local score/achievement tracker stored in the visitor's browser — not a real-money leaderboard or prize system.
+- Raxiwin (/raxiwin.html) is the overview for platform information, account access guidance and the Raxi Game hub.
+- Raxi Win Login (/raxi-win-login.html) is an informational guide. Account links open an external account destination; this site never asks visitors for passwords or OTPs.
+- Raxiwin Game (/raxiwin-game.html) describes the six browser titles currently available from /games.html.
 - "Raxi Login" (/raxi-login.html) is an optional local display-name profile with no password, email, or personal data collection.
 - "Raxi App" (/raxi-app.html) is a free installable Progressive Web App (PWA) version of the site, not a native app-store download.
 - No personal data is collected; scores and profile names are stored only in the visitor's browser localStorage.
@@ -16,6 +19,9 @@
 - Raxi Win: https://rexigame.com/raxi-win.html
 - Raxi Login: https://rexigame.com/raxi-login.html
 - Raxi App: https://rexigame.com/raxi-app.html
+- Raxiwin Guide: https://rexigame.com/raxiwin.html
+- Raxi Win Login: https://rexigame.com/raxi-win-login.html
+- Raxiwin Game: https://rexigame.com/raxiwin-game.html
 - How to Play: https://rexigame.com/how-to-play.html
 - FAQ: https://rexigame.com/faq.html
 - Blog: https://rexigame.com/blog.html
